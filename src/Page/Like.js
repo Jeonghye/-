@@ -1,16 +1,17 @@
 import Menubar from '../Component/Menubar';
+import LikeContent from '../Component/LikeContent';
 import Footer from '../Component/Footer';
-import AboutContent from '../Component/AboutContent';
+import '../like-style.css';
 
-function About() {
+function Like() {
 
     return (
     <>
         <Menubar/>
-        <AboutContent/>
+        <LikeContent/>
         <Footer/>
     </>
     );
 }
 
-export default About;
+export default Like;
