@@ -1,16 +1,30 @@
-import Home from './Page/Home';
-import About from './Page/About';
-import Like from './Page/Like';
-import Escape from './Page/Escape';
-import Guest from './Page/Guest';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './layouts/Layout';
+import Main from './pages/Main';
+import Walk from './pages/Walk';
+import MapDetails from './pages/MapDetails';
+import MapSearchResult from './pages/MapSearchResult';
+import Cycle from './pages/Cycle';
+import Hiking from './pages/Hiking';
+import './base.css';
 import './reset.css';
-import './style.css';
 
 function App() {
   return (
-    <>
-    <Like/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <Layout /> }>
+          <Route index element={ <Main /> } />
+          <Route path='walk'>
+            <Route index element={ <Walk/> }/>
+            <Route path=':mapId' element={ <MapDetails/> }/> 
+            <Route path='search' element={ <MapSearchResult/> }/>
+          </Route>
+          <Route path='cycle' element={ <Cycle/> } />
+          <Route path='hiking' element={ <Hiking/> } />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

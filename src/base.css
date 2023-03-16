@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Dongle', sans-serif; */
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+nav {
+    background: #0b5346;
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+}
+
+nav li:hover {
+    background-color: #15272b;
+}
+
+nav li > *{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: 'Dongle', sans-serif;
+}
+
+footer {
+    background: #0b5346;
+    color: aliceblue;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: -10;
+    display: flex !important; 
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+footer > p {
+    font-size: 9pt !important;
+}
+
+main {
+    background-color: antiquewhite;
+    height: 100%;
+}

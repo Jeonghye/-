@@ -1,0 +1,16 @@
+.MapBox div {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5px;
+}
+
+.search input {
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+}
+
+.search button {
+    width: 50px;
+    height: 30px;
+}

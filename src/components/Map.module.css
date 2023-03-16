@@ -1,0 +1,47 @@
+.map {
+    width: 30vw;
+    padding: 20px 20px;
+    background-color: #0b5346;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.map:hover {
+    background-color: rgb(154, 197, 0);
+    color: aliceblue;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.map div {
+    margin: 10px;
+    display: inline-flex;
+}
+
+.map h3 {
+    color: #e4e7d0;
+    margin-right: 10px;
+}
+
+.lvl {
+    position: relative;
+    left: 25vw;
+}
+
+.lvl h5{
+    color: #e4e7d0;
+    margin-right: 10px;
+}
+
+.lvl p {
+    background: orangered;
+    font-weight: 700;
+    font-size: 1em;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
