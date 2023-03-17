@@ -10,35 +10,50 @@ function Walk() {
 
     const [searchValue, setSearchValue] = useState('');
 
+    const [page, setPage] = useState(1);
+
     // const navigate = useNavigate();
 
     useEffect(() => {
 
-        const mapList = getWalkMapList();
-        mapList.then(data => setMapList(data.response.result.featureCollection.features));
 
-    }, []);
+            const maps = getWalkMapList(page);
+            maps.then(data => setMapList(data.response.result.featureCollection.features));
+
+
+    }, [page]);
+
+    
+    const onClickPageHandler = (e) => {
+        if (e.target.value != null && e.target.value != '') {
+            setPage(parseInt(e.target.name) + page)
+        } else if(page < 1) {
+            setPage(1);
+        }
+    }
 
     const onClickHandler = () => {
         // navigate(`/menu/search?menuName=${searchValue}`);/
     }
-
     return (
         <>
             <main>
-                <h1>산책로</h1>
-                <section className='page-info'>
+                <section className={style.pageinfo}>
+                    <h1>산책로</h1>
                     <p>제주올레길, 지리산둘레길, 동해안해파랑길 등 전국의 유명한 13개의 둘레길 및 올레길</p>
                     <div className={style.search}>
-                        <input type="range"/>
                         <input
                             type="search"
                             name="menuName"
                             value={searchValue}
                             onChange={e => setSearchValue(e.target.value)}
                         />
-                        <button onClick={onClickHandler}>검색</button>
+                        <button>검색</button>
                     </div>
+                </section>
+                <section>
+                    <button onClick={ onClickPageHandler } value={page} name={-1}>이전</button>
+                    <button onClick={ onClickPageHandler } value={page} name={+1}>다음</button>
                 </section>
                 <section className={style.MapBox}>
                     <div>

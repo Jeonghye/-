@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getWalkMapList } from '../apis/MapAPI';
+import { getWalkMaps } from '../apis/MapAPI';
 
 function MapDetails() {
 
@@ -21,10 +21,11 @@ function MapDetails() {
 
     useEffect(
         () => {
-            const maps = getWalkMapList();
+
+            const maps = getWalkMaps();
             maps.then(data => setMapList(data.response.result.featureCollection.features));
-            
-            setMap(mapList.filter(map => map.id === mapId)[0]);
+            setMap(mapList.filter(mapitem => mapitem.id === mapId)[0]);
+            console.log(map);
         },[]
     );
 
@@ -32,7 +33,12 @@ function MapDetails() {
 
     return (
         <>
-            <h1>코스 상세 설명...</h1>
+            <div>
+            <h3>산책로 구분 : {map.properties.cat_nam}</h3>
+            <h1>산책로명 : {map.properties.cos_nam} {map.properties.cos_num} </h1>
+            <h3>코스 : {map.properties.lnk_nam} </h3>
+            <h1>{map.properties.len_tim}</h1>
+            </div>
         </>
     );
 }

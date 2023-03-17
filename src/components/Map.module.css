@@ -1,6 +1,7 @@
 .map {
     width: 30vw;
-    padding: 20px 20px;
+    height: 100px;
+    padding: 10px 10px;
     background-color: #0b5346;
     color: aliceblue;
     cursor: pointer;
@@ -23,11 +24,6 @@
 .map h3 {
     color: #e4e7d0;
     margin-right: 10px;
-}
-
-.lvl {
-    position: relative;
-    left: 25vw;
 }
 
 .lvl h5{
