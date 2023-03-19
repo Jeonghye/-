@@ -1,0 +1,40 @@
+.main {
+    padding: 30px;
+}
+
+.title>h1{
+    font-size: 3em;
+    text-align: center;
+    color: rgb(0, 61, 61);
+}
+
+.main > h2 {
+    color: rgb(0, 61, 61);
+}
+
+.box > h4 {
+    margin: 10px;
+}
+
+.box {
+    background: rgba(211, 211, 211, 0.432);
+    color: rgb(43, 43, 43);
+    border-radius: 20px;
+    padding: 30px 50px;
+    margin: 20px 0;
+}
+
+.guide {
+    display: flex;
+    justify-content: center;
+}
+
+.guide > div:first-child {
+    flex-grow: 1;
+    margin-right: 50px;
+}
+
+.guide li {
+    list-style-type: disc;
+    color: rgb(43, 43, 43);
+}

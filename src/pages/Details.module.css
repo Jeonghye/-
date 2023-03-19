@@ -1,0 +1,10 @@
+.box{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.box h3 {
+    margin: 20px;
+    color: darkgreen;
+}

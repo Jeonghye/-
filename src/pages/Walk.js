@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { getWalkMapList } from '../apis/MapAPI';
 import style from './Page.module.css';
 import WalkMap from '../components/WalkMap';
@@ -12,18 +12,17 @@ function Walk() {
 
     const [page, setPage] = useState(1);
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
-    useEffect(() => {
+    const getmaps = async () => {
+        const maps = getWalkMapList(page);
+        maps.then(data => setMapList(data.response.result.featureCollection.features));
+    };
 
-
-            const maps = getWalkMapList(page);
-            maps.then(data => setMapList(data.response.result.featureCollection.features));
-
-
+    useEffect( () => {
+        getmaps();
     }, [page]);
-
-    
+ 
     const onClickPageHandler = (e) => {
         if (e.target.value != null && e.target.value != '') {
             setPage(parseInt(e.target.name) + page)
@@ -33,7 +32,8 @@ function Walk() {
     }
 
     const onClickHandler = () => {
-        // navigate(`/menu/search?menuName=${searchValue}`);/
+
+        navigate(`/walk/search?cos_nam=${ searchValue }`)
     }
     return (
         <>
@@ -44,17 +44,18 @@ function Walk() {
                     <div className={style.search}>
                         <input
                             type="search"
-                            name="menuName"
-                            value={searchValue}
+                            name="cos_nam"
+                            value={ searchValue }
+                            placeholder='코스명'
                             onChange={e => setSearchValue(e.target.value)}
                         />
-                        <button>검색</button>
+                        <button onClick={ onClickHandler }>검색</button>
                     </div>
                 </section>
-                <section>
+                <div className={style.page}>
                     <button onClick={ onClickPageHandler } value={page} name={-1}>이전</button>
                     <button onClick={ onClickPageHandler } value={page} name={+1}>다음</button>
-                </section>
+                </div>
                 <section className={style.MapBox}>
                     <div>
                         {mapList.map(map => <WalkMap key={map.id} map={map} />)}

@@ -45,8 +45,8 @@ footer {
     color: aliceblue;
     width: 100%;
     height: 50px;
-    position: absolute;
-    bottom: -10;
+    position: absolute !important;
+    bottom: -10 !important;
     display: flex !important; 
     align-items: center !important;
     justify-content: center !important;
@@ -54,9 +54,4 @@ footer {
 
 footer > p {
     font-size: 9pt !important;
-}
-
-main {
-    background-color: antiquewhite;
-    height: 100%;
 }

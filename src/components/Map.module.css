@@ -1,6 +1,6 @@
 .map {
     width: 30vw;
-    height: 100px;
+    height: 120px;
     padding: 10px 10px;
     background-color: #0b5346;
     color: aliceblue;
@@ -21,8 +21,9 @@
     display: inline-flex;
 }
 
-.map h3 {
-    color: #e4e7d0;
+.map h1 {
+    color: #fff;
+    font-weight: 500;
     margin-right: 10px;
 }
 

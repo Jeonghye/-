@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 걷기 여행을 위한 사이트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**국내에서 걷기 좋은 산책로, 등산로의 정보를 한 눈에 볼 수 있는 사이트**
 
-## Available Scripts
+## **사이트 타겟층**
 
-In the project directory, you can run:
+유명한 국내 산책로에 대해 알고 싶은 사람
+걷기 여행을 하고 싶은 사람
+등산을 하고 싶은 사람
 
-### `npm start`
+## **사이트 기능**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### `걷기 여행 가이드`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+짧고 굵게! 걷기 여행을 하면서 알면 좋은 정보들을 보여드립니다.
 
-### `npm test`
+### `유명 산책길 리스트`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+제주올레길, 지리산둘레길, 동해안해파랑길 등 전국의 유명한 13개의 둘레길 및 올레길 코스를 보여드립니다.
 
-### `npm run build`
+### `산책길 검색기능`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+산책로명을 검색하면 해당 검색된 코스 목록을 보여드립니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `산책길 상세정보`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+원하는 산책로 카드를 선택하면 해당 코스의 상세 정보를 볼 수 있습니다.
 
-### `npm run eject`
+### `걷기 여행 가이드`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+짧고 굵게! 걷기 여행을 하면서 알면 좋은 정보들을 보여드립니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `등산로 리스트`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+전국 120여개의 등산로를 거리별로 보여드립니다.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `등산로 검색기능`
 
-## Learn More
+산이름을 검색하면 해당 검색된 등산로 목록을 보여드립니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `등산로 상세정보`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+원하는 등산로 카드를 선택하면 해당 코스의 상세 정보를 볼 수 있습니다.
 
-### Code Splitting
+## 사용 API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `VWORLD 2D데이터 API 2.0 레퍼런스 - 산책로`
+제공처: 국토교통부
 
-### Analyzing the Bundle Size
+### `VWORLD 2D데이터 API 2.0 레퍼런스 - 등산로`
+제공처 : 산림청, 국립공원관리공단
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 사용 프로그래밍 언어
+javascript(React)
