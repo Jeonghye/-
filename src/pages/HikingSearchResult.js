@@ -15,7 +15,9 @@ function HikingSearchResult() {
     const getmaps = async () => {
         const maps = searchHikingMap(mntn_nm);
         maps.then(data => setMapList(data.response.result.featureCollection.features));
+        console.log(maps);
     }
+    
     useEffect(
         () => {
             getmaps();

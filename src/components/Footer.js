@@ -2,7 +2,7 @@ function Footer() {
 
     return (
         <footer>
-            <p>문제시 djh7659@gmail.com으로 연락주시길 바랍니다.</p>
+            <a href='https://github.com/Jeonghye/homework' target='_blank' style={{color:'white', textDecoration:'none'}}>https://github.com/Jeonghye/homework</a>
         </footer>
     );
 }
